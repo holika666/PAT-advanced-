@@ -1,0 +1,16 @@
+if __name__ == '__main__':
+    line = input().split()
+    number_1 = list(map(int, line[0].split('.')))
+    number_2 = list(map(int, line[1].split('.')))
+    Galleon = number_1[0] + number_2[0]
+    Sickle = number_1[1] + number_2[1]
+    Knut = number_1[2] + number_2[2]
+    if Knut // 29 >= 1:
+        Sickle += Knut // 29
+    if Sickle // 17 >= 1:
+        Galleon += Sickle // 17
+    Knut = Knut % 29
+    Sickle = Sickle % 17
+    print(Galleon, end='.')
+    print(Sickle, end='.')
+    print(Knut)
